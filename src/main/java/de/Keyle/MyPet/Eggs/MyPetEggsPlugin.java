@@ -1,5 +1,6 @@
 package de.Keyle.MyPet.Eggs;
 
+import de.Keyle.MyPet.Eggs.egg.MyPetEggEnchantment;
 import de.Keyle.MyPet.Eggs.util.MyPetEggsVersion;
 import de.Keyle.MyPet.util.MyPetVersion;
 import de.Keyle.MyPet.util.logger.DebugLogger;
@@ -47,6 +48,7 @@ public class MyPetEggsPlugin extends JavaPlugin implements Listener
             DebugLogger.info(e.getMessage(), "MyPet-Eggs");
         }
 
+        MyPetEggEnchantment.registerEnchantment();
 
         MyPetLogger.write("version " + MyPetEggsVersion.getMyPetEggsVersion() + "-b" + MyPetEggsVersion.getMyPetEggsBuild() + ChatColor.GREEN + " ENABLED", "MyPet-Eggs");
         DebugLogger.info("----------- MyPet-Eggs ready -----------", "MyPet-Eggs");
