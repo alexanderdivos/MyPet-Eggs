@@ -3,3 +3,4 @@ main: de.Keyle.MyPet.Eggs.MyPetEggsPlugin
 version: ${mypeteggs.version}
 author: Keyle
 website: ${project.url}
+depend: [MyPet]
