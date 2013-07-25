@@ -4,3 +4,4 @@ version: ${mypeteggs.version}
 author: Keyle
 website: ${project.url}
 depend: [MyPet]
+loadbefore: [TimTheEnchanter]
