@@ -21,6 +21,13 @@
 
     <repositories>
         <repository>
+            <id>mypet-repo</id>
+            <url>http://repo.keyle.de/</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
             <id>bukkit-repo</id>
             <url>http://repo.bukkit.org/content/groups/public/</url>
         </repository>
@@ -31,13 +38,6 @@
         <repository>
             <id>metrics-repo</id>
             <url>http://repo.mcstats.org/content/repositories/releases/</url>
-        </repository>
-        <repository>
-            <id>mypet-repo</id>
-            <url>http://repo.keyle.de/</url>
-            <snapshots>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
         </repository>
     </repositories>
 
