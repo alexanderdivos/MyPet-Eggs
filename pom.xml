@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.Keyle</groupId>
     <artifactId>MyPet-Eggs</artifactId>
-    <version>${mypeteggs.version}-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>MyPet-Eggs</name>
 
     <url>http://mypet.keyle.de/doku.php?id=en:plugins:eggs</url>
@@ -11,7 +11,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <mypeteggs.version>0.0.1</mypeteggs.version>
         <minecraft.version>1.6.2</minecraft.version>
         <bukkit.version>R1.0</bukkit.version>
         <mypet.build>363</mypet.build>
@@ -103,6 +102,19 @@
         </resources>
         <plugins>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>parse-version</id>
+                        <goals>
+                            <goal>parse-version</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.0.2</version>
@@ -120,7 +132,7 @@
                         <manifestEntries>
                             <Project-Author>Keyle</Project-Author>
                             <Project-Name>MyPet-NPC</Project-Name>
-                            <Project-Version>${mypeteggs.version}</Project-Version>
+                            <Project-Version>${version}</Project-Version>
                             <Project-Build>${BUILD_NUMBER}</Project-Build>
                             <Git-Commit>${GIT_COMMIT}</Git-Commit>
                             <Required-MyPet-Build>${mypet.build}</Required-MyPet-Build>

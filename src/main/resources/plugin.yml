@@ -1,6 +1,6 @@
 name: MyPet-Eggs
 main: de.Keyle.MyPet.Eggs.MyPetEggsPlugin
-version: ${mypeteggs.version}
+version: ${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}
 author: Keyle
 website: ${project.url}
 depend: [MyPet]
