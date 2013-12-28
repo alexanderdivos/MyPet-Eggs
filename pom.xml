@@ -73,8 +73,8 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>de.Keyle</groupId>
-            <artifactId>MyPet</artifactId>
+            <groupId>de.keyle</groupId>
+            <artifactId>mypet</artifactId>
             <version>${mypet.version}</version>
             <scope>provided</scope>
         </dependency>
