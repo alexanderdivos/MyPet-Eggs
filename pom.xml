@@ -37,7 +37,7 @@
         <bukkit.version>R1.0</bukkit.version>
         <mypet.build>363</mypet.build>
 
-        <mypet.version>1.1.4-SNAPSHOT</mypet.version>
+        <mypet.version>1.1.7-SNAPSHOT</mypet.version>
         <metrics-lite.version>R7</metrics-lite.version>
     </properties>
 
@@ -82,11 +82,11 @@
 
     <distributionManagement>
         <repository>
-            <id>MyPet</id>
+            <id>Keyle-Release-Repo</id>
             <url>http://nexus.keyle.de/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
-            <id>MyPet-snapshot</id>
+            <id>Keyle-Snapshot-Repo</id>
             <url>http://nexus.keyle.de/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
