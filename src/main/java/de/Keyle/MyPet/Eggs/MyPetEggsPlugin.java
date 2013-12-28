@@ -29,8 +29,7 @@ public class MyPetEggsPlugin extends JavaPlugin implements Listener
             return;
         }
 
-        if (Integer.parseInt(MyPetVersion.getMyPetBuild()) < Integer.parseInt(MyPetEggsVersion.getRequiredMyPetBuild()))
-        {
+        if (Integer.parseInt(MyPetVersion.getBuild()) < Integer.parseInt(MyPetEggsVersion.getRequiredMyPetBuild())) {
             MyPetLogger.write(ChatColor.RED + "This version of MyPet-Eggs requires MyPet build-#" + MyPetEggsVersion.getRequiredMyPetBuild() + " or higher", "MyPet-Eggs");
             this.setEnabled(false);
             return;
