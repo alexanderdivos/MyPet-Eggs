@@ -27,46 +27,35 @@ import java.util.jar.Attributes;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
-public class MyPetEggsVersion
-{
+public class MyPetEggsVersion {
     private static boolean updated = false;
 
     private static String myPetNpcVersion = "0.0.0";
     private static String myPetNpcBuild = "0";
     private static String requiredMyPetBuild = "0";
 
-    private static void getManifestVersion()
-    {
-        try
-        {
+    private static void getManifestVersion() {
+        try {
             String path = MyPetEggsVersion.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
             Attributes attr = getClassLoaderForExtraModule(path).getMainAttributes();
 
-            if (attr.getValue("Project-Version") != null)
-            {
+            if (attr.getValue("Project-Version") != null) {
                 myPetNpcVersion = attr.getValue("Project-Version");
             }
-            if (attr.getValue("Project-Build") != null)
-            {
+            if (attr.getValue("Project-Build") != null) {
                 myPetNpcBuild = attr.getValue("Project-Build");
             }
-            if (attr.getValue("Required-MyPet-Build") != null)
-            {
+            if (attr.getValue("Required-MyPet-Build") != null) {
                 requiredMyPetBuild = attr.getValue("Required-MyPet-Build");
             }
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
-        }
-        catch (URISyntaxException e)
-        {
+        } catch (URISyntaxException e) {
             e.printStackTrace();
         }
     }
 
-    private static Manifest getClassLoaderForExtraModule(String filepath) throws IOException
-    {
+    private static Manifest getClassLoaderForExtraModule(String filepath) throws IOException {
         File jar = new File(filepath);
         JarFile jf = new JarFile(jar);
         Manifest mf = jf.getManifest();
@@ -75,38 +64,31 @@ public class MyPetEggsVersion
 
     }
 
-    public static String getMyPetEggsVersion()
-    {
-        if (!updated)
-        {
+    public static String getMyPetEggsVersion() {
+        if (!updated) {
             getManifestVersion();
             updated = true;
         }
         return myPetNpcVersion;
     }
 
-    public static String getMyPetEggsBuild()
-    {
-        if (!updated)
-        {
+    public static String getMyPetEggsBuild() {
+        if (!updated) {
             getManifestVersion();
             updated = true;
         }
         return myPetNpcBuild;
     }
 
-    public static String getRequiredMyPetBuild()
-    {
-        if (!updated)
-        {
+    public static String getRequiredMyPetBuild() {
+        if (!updated) {
             getManifestVersion();
             updated = true;
         }
         return requiredMyPetBuild;
     }
 
-    public static void reset()
-    {
+    public static void reset() {
         updated = false;
     }
 }

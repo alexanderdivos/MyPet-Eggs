@@ -12,18 +12,15 @@ import org.mcstats.MetricsLite;
 
 import java.io.IOException;
 
-public class MyPetEggsPlugin extends JavaPlugin implements Listener
-{
+public class MyPetEggsPlugin extends JavaPlugin implements Listener {
     private static MyPetEggsPlugin plugin;
 
-    public void onEnable()
-    {
+    public void onEnable() {
         plugin = this;
 
         DebugLogger.info("----------- loading MyPet-Eggs ... -----------", "MyPet-Eggs");
 
-        if (!getServer().getPluginManager().isPluginEnabled("MyPet"))
-        {
+        if (!getServer().getPluginManager().isPluginEnabled("MyPet")) {
             MyPetLogger.write(ChatColor.RED + "MyPet plugin isn't enabled. Disable MyPet-Eggs.", "MyPet-Eggs");
             this.setEnabled(false);
             return;
@@ -35,14 +32,11 @@ public class MyPetEggsPlugin extends JavaPlugin implements Listener
             return;
         }
 
-        try
-        {
+        try {
             MetricsLite metrics = new MetricsLite(this);
             metrics.start();
             DebugLogger.info("MetricsLite activated", "MyPet-Eggs");
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             DebugLogger.info("MetricsLite not activated", "MyPet-Eggs");
             DebugLogger.info(e.getMessage(), "MyPet-Eggs");
         }
@@ -53,8 +47,7 @@ public class MyPetEggsPlugin extends JavaPlugin implements Listener
         DebugLogger.info("----------- MyPet-Eggs ready -----------", "MyPet-Eggs");
     }
 
-    public static MyPetEggsPlugin getPlugin()
-    {
+    public static MyPetEggsPlugin getPlugin() {
         return plugin;
     }
 }
